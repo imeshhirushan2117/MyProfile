@@ -533,26 +533,24 @@ main > nav > ul > li:hover {
 #proPic{
     position: absolute;
     justify-content: center;
-    width: 394px;
-    height: 371px;
+    width: 363px;
+    height: 365px;
     background-color: black;
     border: 5px solid #FFA502;
     margin: auto;
-    left: 131px;
-    /* top: -703px; */
+    left: 148px;
     border-radius: 100%;
-    bottom: 249px;
+    bottom: 131px;
 }
 
 #myName{
     font-size: 40px;
     position: absolute;
     justify-content: center;
-    top: 234px;
-    left: 663px;
+    top: 185px;
+    left: 612px;
     color: #fec51c;
     line-height: 20px;
-/* margin: auto;*/
 }
 #fistName{
 font-size: 35px;
