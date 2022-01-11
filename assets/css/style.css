@@ -80,7 +80,7 @@
     font-size: 35px;
 }
 
-#iconPic{
+#iconPic {
     display: flex;
     width: max-content;
     height: 469px;
@@ -95,16 +95,17 @@
     margin: auto;
     margin-right: 35px;
 }
-#iconPic >img{
+
+#iconPic > img {
     width: 10px;
     margin: 4px;
     cursor: pointer;
 }
-.coverPage > div >nav>ul>li>a{
+
+.coverPage > div > nav > ul > li > a {
     color: white;
     text-decoration: none;
 }
-
 
 /*=================aboutMe=================*/
 
@@ -125,7 +126,8 @@
     border-radius: 57px;
     border: 5px solid #FFA502;
 }
-#info{
+
+#info {
     position: absolute;
     width: 600px;
     color: #AFB6D2;
@@ -135,12 +137,14 @@
     letter-spacing: 2px;
     line-height: 250%;
 }
-#info > pre > span{
-    color:#fec51c ;
+
+#info > pre > span {
+    color: #fec51c;
     tab-size: 5;
 }
+
 /*button*/
-#btnCv{
+#btnCv {
     position: relative;
     width: 480px;
     height: 78px;
@@ -160,6 +164,7 @@
     cursor: pointer;
 
 }
+
 #btnCv:hover {
     background-color: #f39c12;
 }
@@ -170,9 +175,17 @@
     right: 0px;
     letter-spacing: 5px;
 }
-#btnCv > span >a{
+
+#btnCv > span > a {
     color: white;
     text-decoration: none;
+}
+#divAbout > h2 {
+    position: relative;
+    font-size: 62px;
+    color: #FEC51C;
+    left: -1426px;
+    top: -90px;
 }
 /*=================Skills=================*/
 
@@ -269,9 +282,17 @@
     background-image: url("../images/icon/skills/Xl.png");
 }
 
+#divSkills > h2 {
+    position: relative;
+    font-size: 62px;
+    color: #FEC51C;
+    left: -1426px;
+    top: -90px;
+}
+
 /*=================Projects=================*/
 
-#proSlider{
+#proSlider {
     height: 1083px;
     width: 1735px;
     display: flex;
@@ -314,47 +335,53 @@
     position: relative;
     height: 80px;
     width: 525px;
-   /* background: #212428;*/
+    /* background: #212428;*/
     border-radius: 30px;
     margin-top: 27px;
 }
 
 
 .pro-div {
-height: 265px;
-width: 539px;
-position: absolute;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-background-position: center;
-background-repeat: no-repeat;
-background-size: contain;
-border: 5px solid  #f39c12;
-margin-top: -492px;
+    height: 265px;
+    width: 539px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 5px solid #f39c12;
+    margin-top: -492px;
 }
 
 #pro_1 {
-background-image: url("../images/project/lead1.png");
+    background-image: url("../images/project/lead1.png");
 }
 
 #pro_2 {
-background-image: url("../images/project/lead2.png");
+    background-image: url("../images/project/lead2.png");
 }
 
 #pro_3 {
-background-image: url("../images/project/lead3.png");
+    background-image: url("../images/project/lead3.png");
 }
 
 #pro_4 {
-background-image: url("../images/project/lead4.png");
+    background-image: url("../images/project/lead4.png");
 }
 
 #pro_5 {
-background-image: url("../images/project/MVC1.png");
+    background-image: url("../images/project/MVC1.png");
 }
-
+#divPro > h2 {
+    position: relative;
+    font-size: 62px;
+    color: #FEC51C;
+    left: -1426px;
+    top: -90px;
+}
 /*=================Activities=================*/
 
 #Hobbies {
@@ -377,6 +404,7 @@ background-image: url("../images/project/MVC1.png");
     color: #EFF0F0;
 
 }
+
 #imgH1 {
     background-image: url("../images/avtivities/moneyHeist.png");
     position: absolute;
@@ -422,6 +450,7 @@ background-image: url("../images/project/MVC1.png");
     border-radius: 20px;
     border: 10px solid #FFA502;
 }
+
 #imgH5 {
     background-image: url("../images/avtivities/guiter1.png");
     position: absolute;
@@ -432,6 +461,7 @@ background-image: url("../images/project/MVC1.png");
     border-radius: 20px;
     border: 10px solid #FFA502;
 }
+
 #imgH6 {
     background-image: url("../images/avtivities/guiter2.png");
     position: absolute;
@@ -442,6 +472,7 @@ background-image: url("../images/project/MVC1.png");
     border-radius: 20px;
     border: 10px solid #FFA502;
 }
+
 .tvSeries {
     position: relative;
     width: 515px;
@@ -470,7 +501,7 @@ background-image: url("../images/project/MVC1.png");
 }
 
 
-tvSeries> span1 {
+tvSeries > span1 {
     text-transform: capitalize;
     position: relative;
     right: 0px;
@@ -506,7 +537,7 @@ tvSeries> span1 {
 }
 
 
-hobby> span2 {
+hobby > span2 {
     text-transform: capitalize;
     position: relative;
     right: 0px;
@@ -542,10 +573,24 @@ hobby> span2 {
 }
 
 
-music> span3 {
+music > span3 {
     text-transform: capitalize;
     position: relative;
     right: 0px;
     letter-spacing: 5px;
 }
-
+#divAct > h2 {
+    position: relative;
+    font-size: 62px;
+    color: #FEC51C;
+    left: -1426px;
+    top: -152px;
+}
+/*=================Contacts=================*/
+#divCon> h2 {
+    position: relative;
+    font-size: 62px;
+    color: #FEC51C;
+    left: -1426px;
+    top: -90px;
+}
