@@ -180,6 +180,7 @@
     color: white;
     text-decoration: none;
 }
+
 #divAbout > h2 {
     position: relative;
     font-size: 62px;
@@ -187,6 +188,7 @@
     left: -1426px;
     top: -90px;
 }
+
 /*=================Skills=================*/
 
 #slider {
@@ -375,6 +377,7 @@
 #pro_5 {
     background-image: url("../images/project/MVC1.png");
 }
+
 #divPro > h2 {
     position: relative;
     font-size: 62px;
@@ -382,6 +385,7 @@
     left: -1426px;
     top: -90px;
 }
+
 /*=================Activities=================*/
 
 #Hobbies {
@@ -579,6 +583,7 @@ music > span3 {
     right: 0px;
     letter-spacing: 5px;
 }
+
 #divAct > h2 {
     position: relative;
     font-size: 62px;
@@ -586,11 +591,193 @@ music > span3 {
     left: -1426px;
     top: -152px;
 }
+
 /*=================Contacts=================*/
-#divCon> h2 {
+
+#contact {
+    position: relative;
+    color: black;
+    text-align: center;
+    margin: auto;
+    font-size: 100px;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+section > div > h1 > mc {
+    color: #18E5CD;
+}
+
+h1#contact:before {
+    content: "";
+    display: block;
+    width: 122px;
+    height: 18px;
+    background: #18E5CD;
+    left: 590px;
+    top: 43%;
+    position: absolute;
+}
+
+h1#contact:after {
+    content: "";
+    display: block;
+    width: 122px;
+    height: 18px;
+    background: black;
+    right: 590px;
+    top: 43%;
+    position: absolute;
+}
+
+#contactDetail {
+    position: absolute;
+    width: 822px;
+    height: 305px;
+    top: -298px;
+    left: 60px;
+    right: 869px;
+    bottom: 0px;
+    margin: auto;
+}
+
+.contactHead {
+    text-align: center;
+    margin: auto;
+    font-size: 66px;
+    font-family: 'Saira Condensed', sans-serif;
+    position: relative;
+    top: 5192px;
+    color: #FEC51C;
+    left: 34px;
+
+}
+
+#contactDetail > img {
+    position: relative;
+    height: 435px;
+    left: 150px;
+}
+
+.contactFooter {
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    font-family: 'Saira Condensed', sans-serif;
+    position: relative;
+    top: 5328px;
+    color: wheat;
+    letter-spacing: 4px;
+    line-height: 2;
+
+}
+
+
+.alignContactIcn {
+    position: absolute;
+    display: flex;
+    width: max-content;
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+    bottom: -4905px;
+    left: 55px;
+}
+
+.contactIcn {
+    width: 45px;
+}
+
+#before {
+    width: 7px;
+    height: 193px;
+    left: 18px;
+    top: 297px;
+    position: absolute;
+    background-color: black;
+}
+
+#after {
+    width: 7px;
+    height: 198px;
+    bottom: 280px;
+    top: -255px;
+    left: 18px;
+    position: absolute;
+    background-color: black;
+}
+
+#chatBox {
+    position: absolute;
+    display: flex;
+    height: 331px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+    bottom: 268px;
+    left: 1088px;
+}
+
+.lbl {
+    left: 35px;
+    color: #FEC51C;
+    margin-top: 31px;
+    font-weight: bold;
+    font-size: 33px;
+    font-family: 'Saira Condensed', sans-serif;
+    top: 4891px;
+    position: relative;
+}
+
+.inp {
+    border: 5px solid #FEC51C;
+    width: 643px;
+    height: 44px;
+    font-size: 26px;
+    position: relative;
+    top: 4898px;
+}
+
+.inp2 {
+    border: 5px solid #FEC51C;
+    width: 643px;
+    font-size: 26px;
+    border-radius: 20px;
+    margin-bottom: -5145px;
+}
+
+#contactBtnDiv {
+    position: absolute;
+    margin: auto;
+    left: 490px;
+}
+
+#contactBtn {
+    width: 652px;
+    height: 63px;
+    background: #18E5CD;
+    box-shadow: -1px 2px 16px #18e5cd;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    border: 0;
+    font-family: 'Saira Condensed', sans-serif;
+    margin-top: 5180px;
+    margin-left: -481px;
+}
+
+#contactBtn:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#divCon > h2 {
     position: relative;
     font-size: 62px;
     color: #FEC51C;
-    left: -1426px;
+    left: -1328px;
     top: -90px;
 }
