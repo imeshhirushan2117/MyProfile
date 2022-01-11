@@ -271,32 +271,9 @@
 
 /*=================Projects=================*/
 
-/*
-#coverPage{
-    height: 80vh;
-    background-color: #212428;
-    text-decoration: underline white;
-
-}
-
-#coverPage > div:first-child {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-#coverPage > div > h2 {
-    position: relative;
-    font-size: 62px;
-    color: #EFF0F0;
-
-}
-
 #proSlider{
-    height: 1000px;
-    width: 1500px;
+    height: 1083px;
+    width: 1735px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -306,6 +283,7 @@
     margin: auto;
     border-radius: 30px;
     overflow: hidden;
+    top: 2983px;
 
 }
 
@@ -334,49 +312,48 @@
 
 .proSlid-div {
     position: relative;
-    height: 474px;
-    width: 551px;
-    background: #212428;
+    height: 80px;
+    width: 525px;
+   /* background: #212428;*/
     border-radius: 30px;
-    box-shadow: 0px 5px 10px 5px rgb(0 0 0.50%)
+    margin-top: 27px;
 }
 
 
 .pro-div {
-    height: 470px;
-    width: 539px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 1px solid white;
-    margin-top: -171px
+height: 265px;
+width: 539px;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+border: 5px solid  #f39c12;
+margin-top: -492px;
 }
 
-
 #pro_1 {
-    background-image: url("../images/project/lead1.png");
+background-image: url("../images/project/lead1.png");
 }
 
 #pro_2 {
-    background-image: url("../images/project/lead2.png");
+background-image: url("../images/project/lead2.png");
 }
 
 #pro_3 {
-    background-image: url("../images/project/lead3.png");
+background-image: url("../images/project/lead3.png");
 }
 
 #pro_4 {
-    background-image: url("../images/project/lead4.png");
+background-image: url("../images/project/lead4.png");
 }
 
 #pro_5 {
-    background-image: url("../images/project/MVC1.png");
-}*/
+background-image: url("../images/project/MVC1.png");
+}
 
 /*=================Activities=================*/
 
@@ -403,14 +380,13 @@
 #imgH1 {
     background-image: url("../images/avtivities/moneyHeist.png");
     position: absolute;
-    width: 521px;
+    width: 519px;
     height: 295px;
     left: 64px;
     top: 5395px;
     border-radius: 20px;
-    margin-top: -5294px;
+    margin-top: -1306px;
     border: 10px solid #FFA502;
-
 }
 
 #imgH2 {
@@ -421,9 +397,8 @@
     left: 64px;
     top: 5735px;
     border-radius: 20px;
-    margin-top: -5294px;
+    margin-top: -1260px;
     border: 10px solid #FFA502;
-
 }
 
 #imgH3 {
@@ -431,8 +406,8 @@
     position: absolute;
     width: 469px;
     height: 250px;
-    left: 724px;
-    top: 106px;
+    left: 698px;
+    top: 4104px;
     border-radius: 20px;
     border: 10px solid #FFA502;
 }
@@ -440,10 +415,10 @@
 #imgH4 {
     background-image: url("../images/avtivities/hobby2.png");
     position: absolute;
-    width: 470px;
-    height: 333px;
-    left: 724px;
-    top: 408px;
+    width: 522px;
+    height: 324px;
+    left: 676px;
+    top: 4452px;
     border-radius: 20px;
     border: 10px solid #FFA502;
 }
@@ -452,8 +427,8 @@
     position: absolute;
     width: 528px;
     height: 301px;
-    left: 1325px;
-    top: 433px;
+    left: 1300px;
+    top: 4434px;
     border-radius: 20px;
     border: 10px solid #FFA502;
 }
@@ -462,8 +437,8 @@
     position: absolute;
     width: 538px;
     height: 278px;
-    left: 1314px;
-    top: 102px;
+    left: 1305px;
+    top: 4080px;
     border-radius: 20px;
     border: 10px solid #FFA502;
 }
@@ -485,8 +460,8 @@
     margin-top: -109px;
     margin-right: 72px;
     cursor: pointer;
-    top: 48px;
-    left: 307px;
+    top: -942px;
+    left: -9px;
 }
 
 
@@ -521,9 +496,9 @@ tvSeries> span1 {
     margin-top: -109px;
     margin-right: 72px;
     cursor: pointer;
-    top: 50px;
+    top: -950px;
     leaf: 10px;
-    left: 174px;
+    left: -155px;
 }
 
 .hobby:hover {
@@ -557,8 +532,8 @@ hobby> span2 {
     margin-top: -109px;
     margin-right: 72px;
     cursor: pointer;
-    top: 7px;
-    left: 55px;
+    top: -992px;
+    left: -265px;
 }
 
 
