@@ -40,7 +40,7 @@
 
 }
 
-.liHeader:hover {
+.liHeader > a:hover {
     color: #fec51c;
     cursor: pointer;
 }
@@ -99,6 +99,10 @@
     width: 10px;
     margin: 4px;
     cursor: pointer;
+}
+.coverPage > div >nav>ul>li>a{
+    color: white;
+    text-decoration: none;
 }
 
 
@@ -166,3 +170,407 @@
     right: 0px;
     letter-spacing: 5px;
 }
+#btnCv > span >a{
+    color: white;
+    text-decoration: none;
+}
+/*=================Skills=================*/
+
+#slider {
+    height: 798px;
+    width: 1488px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: -977px;
+    margin-left: 203px;
+
+}
+
+#slid-con-div {
+    width: 3000px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-shrink: 0;
+    flex-basis: 3107px;
+    margin-left: 1828px;
+    animation: scroll 15s linear alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    cursor: pointer;
+}
+
+@keyframes scroll {
+    from {
+        margin-left: 1828px;
+    }
+    to {
+        margin-left: -1821px;
+    }
+}
+
+.slid-div {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background: #212428;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.img-div {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid white;
+}
+
+#img_1 {
+    background-image: url("../images/icon/skills/java.png");
+}
+
+#img_2 {
+    background-image: url("../images/icon/skills/sql.png");
+}
+
+#img_3 {
+    background-image: url("../images/icon/skills/scc.png");
+}
+
+#img_4 {
+    background-image: url("../images/icon/skills/html.png");
+}
+
+#img_5 {
+    background-image: url("../images/icon/skills/hibernate.png");
+}
+
+#img_6 {
+    background-image: url("../images/icon/skills/PhotShop.png");
+}
+
+#img_7 {
+    background-image: url("../images/icon/skills/Xl.png");
+}
+
+/*=================Projects=================*/
+
+/*
+#coverPage{
+    height: 80vh;
+    background-color: #212428;
+    text-decoration: underline white;
+
+}
+
+#coverPage > div:first-child {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#coverPage > div > h2 {
+    position: relative;
+    font-size: 62px;
+    color: #EFF0F0;
+
+}
+
+#proSlider{
+    height: 1000px;
+    width: 1500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+
+#proSlid-con-div {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-shrink: 0;
+    flex-basis: 3107px;
+    margin-left: 1828px;
+    animation: scroll 10s linear alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    cursor: pointer;
+}
+
+@keyframes scroll {
+    from {
+        margin-left: 1828px;
+    }
+    to {
+        margin-left: -1821px;
+    }
+}
+
+.proSlid-div {
+    position: relative;
+    height: 474px;
+    width: 551px;
+    background: #212428;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px 5px rgb(0 0 0.50%)
+}
+
+
+.pro-div {
+    height: 470px;
+    width: 539px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid white;
+    margin-top: -171px
+}
+
+
+#pro_1 {
+    background-image: url("../images/project/lead1.png");
+}
+
+#pro_2 {
+    background-image: url("../images/project/lead2.png");
+}
+
+#pro_3 {
+    background-image: url("../images/project/lead3.png");
+}
+
+#pro_4 {
+    background-image: url("../images/project/lead4.png");
+}
+
+#pro_5 {
+    background-image: url("../images/project/MVC1.png");
+}*/
+
+/*=================Activities=================*/
+
+#Hobbies {
+    height: 150vh;
+    background-color: #212428;
+}
+
+#Hobbies > div:first-child {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline white;
+
+}
+
+#Hobbies > div > h2 {
+    position: relative;
+    font-size: 62px;
+    color: #EFF0F0;
+
+}
+#imgH1 {
+    background-image: url("../images/avtivities/moneyHeist.png");
+    position: absolute;
+    width: 521px;
+    height: 295px;
+    left: 64px;
+    top: 5395px;
+    border-radius: 20px;
+    margin-top: -5294px;
+    border: 10px solid #FFA502;
+
+}
+
+#imgH2 {
+    background-image: url("../images/avtivities/breakingBad.png");
+    position: absolute;
+    width: 521px;
+    height: 295px;
+    left: 64px;
+    top: 5735px;
+    border-radius: 20px;
+    margin-top: -5294px;
+    border: 10px solid #FFA502;
+
+}
+
+#imgH3 {
+    background-image: url("../images/avtivities/hobby1.png");
+    position: absolute;
+    width: 469px;
+    height: 250px;
+    left: 724px;
+    top: 106px;
+    border-radius: 20px;
+    border: 10px solid #FFA502;
+}
+
+#imgH4 {
+    background-image: url("../images/avtivities/hobby2.png");
+    position: absolute;
+    width: 470px;
+    height: 333px;
+    left: 724px;
+    top: 408px;
+    border-radius: 20px;
+    border: 10px solid #FFA502;
+}
+#imgH5 {
+    background-image: url("../images/avtivities/guiter1.png");
+    position: absolute;
+    width: 528px;
+    height: 301px;
+    left: 1325px;
+    top: 433px;
+    border-radius: 20px;
+    border: 10px solid #FFA502;
+}
+#imgH6 {
+    background-image: url("../images/avtivities/guiter2.png");
+    position: absolute;
+    width: 538px;
+    height: 278px;
+    left: 1314px;
+    top: 102px;
+    border-radius: 20px;
+    border: 10px solid #FFA502;
+}
+.tvSeries {
+    position: relative;
+    width: 515px;
+    height: 74px;
+    border: 5px solid #fec51c;
+    background-color: transparent;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 5px rgb(0 0 0);
+    color: #ffffff;
+    line-height: 31px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 77px;
+    margin-top: -109px;
+    margin-right: 72px;
+    cursor: pointer;
+    top: 48px;
+    left: 307px;
+}
+
+
+.tvSeries:hover {
+    background-color: #FEC51C;
+}
+
+
+tvSeries> span1 {
+    text-transform: capitalize;
+    position: relative;
+    right: 0px;
+    letter-spacing: 5px;
+}
+
+
+.hobby {
+    position: relative;
+    width: 487px;
+    height: 76px;
+    border: 5px solid #fec51c;
+    background-color: transparent;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 5px rgb(0 0 0);
+    color: #ffffff;
+    line-height: 31px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 195px;
+    margin-top: -109px;
+    margin-right: 72px;
+    cursor: pointer;
+    top: 50px;
+    leaf: 10px;
+    left: 174px;
+}
+
+.hobby:hover {
+    background-color: #FEC51C;
+}
+
+
+hobby> span2 {
+    text-transform: capitalize;
+    position: relative;
+    right: 0px;
+    letter-spacing: 5px;
+}
+
+
+.music {
+    position: relative;
+    width: 548px;
+    height: 72px;
+    border: 5px solid #fec51c;
+    background-color: transparent;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 5px rgb(0 0 0);
+    color: #ffffff;
+    line-height: 31px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 1565px;
+    margin-top: -109px;
+    margin-right: 72px;
+    cursor: pointer;
+    top: 7px;
+    left: 55px;
+}
+
+
+.music:hover {
+    background-color: #FEC51C;
+}
+
+
+music> span3 {
+    text-transform: capitalize;
+    position: relative;
+    right: 0px;
+    letter-spacing: 5px;
+}
+
