@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="customer.html">
+                <img alt="Logo" height="100" src="assets/img/food.jpg" width="100"></a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active" href="customer.html">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="item.html">Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Order</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<section class="container-fluid">
+
+    <div class="rounded-3 p-3" style="background-color: green; margin-top: 30px;">
+        <h1 class="text-center mb-3"><i class="bi bi-people-fill m-2"></i>Customer Form</h1>
+    </div>
+
+    <div class="row g-3 align-items-center pb-3 justify-content-between">
+        <div class="col-12 col-md-6 col-xl-6">
+            <div class="input-group mb-3" style="margin-top: 30px;">
+                <input aria-describedby="button-addon1" aria-label="Example text with button addon" class="form-control"
+                       id="txtSearch" placeholder="Search Customer" type="text">
+                <button class="btn btn-success" id="btnSearch" type="button">
+                    <i class="bi bi-search m-2"> </i>Search
+                </button>
+            </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-4 col-xl-6">
+            <button class="btn btn-danger" id="btnDelete" style="margin-bottom: -10px" type="button">Delete <i
+                    class="bi bi-trash"></i></button>
+            <button class="btn btn-warning" id="btnClear" style="margin-bottom: -10px" type="button">Clear <i
+                    class="bi bi-backspace m-2"></i></button>
+            <button class="btn btn-info" id="btnAdd" style="margin-bottom: -10px" type="button">Add <i
+                    class="bi bi-person-plus-fill m-2"></i></button>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-6">
+                <label class="form-label" for="txtCusID">Customer ID</label>
+                <input class="form-control" id="txtCusID" placeholder="Customer ID" type="text">
+            </div>
+            <div class="mb-3 col-6">
+                <label class="form-label" for="txtCusName">Customer Name</label>
+                <input class="form-control" id="txtCusName" placeholder="Customer Name" type="text">
+            </div>
+            <div class="mb-3 col-6">
+                <label class="form-label" for="txtCusAddress">Customer Address</label>
+                <input class="form-control" id="txtCusAddress" placeholder="Customer Address" type="text">
+            </div>
+            <div class="mb-3 col-6">
+                <label class="form-label" for="txtCusTP">Customer Telephone Number</label>
+                <input class="form-control" id="txtCusTP" placeholder="Customer Telephone Number" type="text">
+            </div>
+        </div>
+        <div class="row align-items-center pt-3 ">
+            <div class="col-12 mt-2">
+                <div class="table-responsive" style="height: 70vh">
+                    <table class="table table-success table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">Customer ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Telephone</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+</body>
+</html>
