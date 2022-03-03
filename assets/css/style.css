@@ -48,22 +48,22 @@
 #proPic {
     position: absolute;
     justify-content: center;
-    width: 455px;
-    height: 459px;
+    width: 325px;
+    height: 309px;
     background-color: black;
     border: 5px solid #FFA502;
     margin: auto;
-    left: 114px;
+    left: 85px;
     border-radius: 100%;
-    bottom: 160px;
+    bottom: 27px;
 }
 
 #myName {
     font-size: 40px;
     position: absolute;
     justify-content: center;
-    top: 185px;
-    left: 730px;
+    top: 127px;
+    left: 561px;
     color: #fec51c;
     line-height: 200%;
 }
@@ -89,11 +89,11 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 41px;
+    top: 141px;
     bottom: 0;
     margin: auto;
-    margin-right: 35px;
+    margin-right: 35px
 }
 
 #iconPic > img {
@@ -113,15 +113,15 @@
     font-size: 30px;
     font-weight: 700;
     color: rgb(255, 255, 255);
-    margin-right: 30px;
+    margin-right: -108px;
     margin-top: -362px;
 }
 
 #aboutMePic {
-    width: 495px;
-    height: 675px;
+    width: 307px;
+    height: 420px;
     position: absolute;
-    top: 1019px;
+    top: 925px;
     left: 58px;
     border-radius: 57px;
     border: 5px solid #FFA502;
@@ -131,11 +131,11 @@
     position: absolute;
     width: 600px;
     color: #AFB6D2;
-    margin-left: 458px;
+    margin-left: 274px;
     font-size: 35px;
-    top: 1006px;
+    top: 918px;
     letter-spacing: 2px;
-    line-height: 250%;
+    line-height: 150%;
 }
 
 #info > pre > span {
