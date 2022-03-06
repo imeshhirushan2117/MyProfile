@@ -97,6 +97,7 @@
             </div>
         </div>
     </section>
+    <!--customer-->
     <section id="customer">
         <div class="rounded-3 p-3" style="background-color: green; margin-top: 30px;">
             <h1 class="text-center mb-3"><i class="bi bi-people-fill m-2"></i>Customer Form</h1>
@@ -106,18 +107,18 @@
             <div class="col-12 col-md-6 col-xl-6">
                 <div class="input-group mb-3" style="margin-top: 30px;">
                     <input aria-describedby="button-addon1" aria-label="Example text with button addon" class="form-control"
-                           id="txtSearch" placeholder="Search Customer" type="text">
-                    <button class="btn btn-success" id="btnSearch" type="button">
+                           id="txtCustomerSearch" placeholder="Search Customer" type="text">
+                    <button class="btn btn-success" id="btnCustomerSearch" type="button">
                         <i class="bi bi-search m-2"> </i>Search
                     </button>
                 </div>
             </div>
             <div class="col-12 col-md-5 col-lg-4 col-xl-6">
-                <button class="btn btn-danger" id="btnDelete" style="margin-bottom: -10px" type="button">Delete <i
+                <button class="btn btn-danger" id="btnCustomerDelete" style="margin-bottom: -10px" type="button">Delete <i
                         class="bi bi-trash"></i></button>
-                <button class="btn btn-warning" id="btnClear" style="margin-bottom: -10px" type="button">Clear <i
+                <button class="btn btn-warning" id="btnCustomerClear" style="margin-bottom: -10px" type="button">Clear <i
                         class="bi bi-backspace m-2"></i></button>
-                <button class="btn btn-info" id="btnAdd" style="margin-bottom: -10px" type="button">Add <i
+                <button class="btn btn-info" id="btnCustomerAdd" style="margin-bottom: -10px" type="button">Add <i
                         class="bi bi-person-plus-fill m-2"></i></button>
             </div>
             <div class="row">
@@ -141,7 +142,7 @@
             <div class="row align-items-center pt-3 ">
                 <div class="col-12 mt-2">
                     <div class="table-responsive" style="height: 70vh">
-                        <table class="table table-success table-striped">
+                        <table id="tblCustomer" class="table table-success table-striped">
                             <thead>
                             <tr>
                                 <th scope="col">Customer ID</th>
@@ -150,7 +151,7 @@
                                 <th scope="col">Telephone</th>
                             </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="tbodyCustomer">
 
                             </tbody>
                         </table>
@@ -350,6 +351,9 @@
     </section>
 
 </main>
+<script src="assets/jquery/jquery-3.6.0.min.js"></script>
 <script src="assets/js/javaScript.js"></script>
+<script src="assets/jquery/jQuery.js"></script>
+<script  src="assets/db/DB.js"> </script>
 </body>
 </html>
