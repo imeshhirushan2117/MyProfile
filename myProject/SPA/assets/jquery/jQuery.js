@@ -36,9 +36,44 @@ function addCustomerData(){
     }
 }function clearFileld(){
     $("#txtCusID,#txtCusName,#txtCusAddress,#txtCusTP").val("");
-
 }
+
 $("#btnCustomerClear").click(function (){
     clearFileld();
 });
-
+/*textFeeldsForcasing*/
+$("#txtCusID").keydown(function (event) {
+    if (event.key == "Enter") {
+        $("#txtCusName").focus();
+    }
+});
+$("#txtCusName").keydown(function (event) {
+    if (event.key == "Enter") {
+        $("#txtCusAddress").focus();
+    }
+});
+$("#txtCusAddress").keydown(function (event) {
+    if (event.key == "Enter") {
+        $("#txtCusTP").focus();
+    }
+});
+$("#btnCustomerSearch").click(function (){
+   var searchID =  $("#txtCustomerSearch").val();
+   var response = serchCustomer(searchID);
+   if (response){
+       $("#txtCusID").val(response.id);
+       $("#txtCusName").val(response.name);
+       $("#txtCusAddress").val(response.address);
+       $("#txtCusTP").val(response.telNumber);
+   }else {
+       alert("Invalid Customer");
+       clearFileld();
+   }
+});
+function serchCustomer(id){
+    for (let i=0; i<customerDB.length;i++){
+        if (customerDB[i].id == id){
+            return customerDB[i];
+        }
+    }
+}
