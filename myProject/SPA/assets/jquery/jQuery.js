@@ -1,4 +1,4 @@
-/*Customer party*/
+/*===============Customer party===============*/
 
 /*customerAdd*/
 $("#btnCustomerAdd").click(function () {
@@ -38,13 +38,13 @@ function addCustomerData() {
     }
 }
 
-function clearFileld() {
-    $("#txtCusID,#txtCusName,#txtCusAddress,#txtCusTP").val("");
-}
-
+/*btnClear*/
 $("#btnCustomerClear").click(function () {
     clearFileld();
 });
+function clearFileld() {
+    $("#txtCusID,#txtCusName,#txtCusAddress,#txtCusTP").val("");
+}
 
 /*textFeeldsForcasing*/
 $("#txtCusID").keydown(function (event) {
@@ -62,7 +62,8 @@ $("#txtCusAddress").keydown(function (event) {
         $("#txtCusTP").focus();
     }
 });
-/*customer Customer*/
+
+/*customer Search*/
 $("#btnCustomerSearch").click(function () {
     var searchID = $("#txtCustomerSearch").val();
     var response = serchCustomer(searchID);
@@ -90,7 +91,8 @@ $("#btnCustomerDelete").click(function () {
 
 });
 
-/*Item party*/
+/*===============Item party===============*/
+
 /*addItem*/
 $("#btnItemAdd").click(function () {
     let itemId = $("#txtItemID").val();
@@ -129,10 +131,51 @@ function addItemData() {
     }
 }
 
-function clearFileldItem() {
-    $("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").val("");
-}
 /*btnClear*/
 $("#btnItemClear").click(function () {
     clearFileldItem();
+});
+function clearFileldItem() {
+    $("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").val("");
+}
+/*textFeeldsForcasing*/
+$("#txtItemID").keydown(function (event) {
+    if (event.key == "Enter") {
+        $("#txtItemName").focus();
+    }
+});
+$("#txtItemName").keydown(function (event) {
+    if (event.key == "Enter") {
+        $("#txtItemQty").focus();
+    }
+});
+$("#txtItemQty").keydown(function (event) {
+    if (event.key == "Enter") {
+        $("#txtItemPrice").focus();
+    }
+});
+
+/*Item Search*/
+$("#btnItemSearch").click(function () {
+    var searchID = $("#txtItemSearch").val();
+    var response = searchItem(searchID);
+    if (response) {
+        $("#txtItemID").val(response.id);
+        $("#txtItemName").val(response.name);
+        $("#txtItemQty").val(response.qty);
+        $("#txtItemPrice").val(response.price);
+    } else {
+        alert("Invalid Item Search");
+        clearFileld();
+    }
+});
+function searchItem(id) {
+    for (let i = 0; i < itemDB.length; i++) {
+        if (itemDB[i].id == id) {
+            return itemDB[i];
+        }
+    }
+}
+$("#btnItemDelete").click(function () {
+
 });
