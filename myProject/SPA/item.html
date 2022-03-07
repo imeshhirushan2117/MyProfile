@@ -34,6 +34,7 @@
 </header>
 <main class="container">
 
+    <!--item-->
     <section id="item" class="container-fluid">
         <div class="rounded-3 p-3" style="background-color: green; margin-top: 30px;">
             <h1 class="text-center mb-3"><i class="bi bi-box-seam"></i>Item Form</h1>
@@ -79,7 +80,7 @@
             <div class="row align-items-center pt-3 ">
                 <div class="col-12 mt-2">
                     <div class="table-responsive" style="height: 70vh">
-                        <table class="table table-success table-striped">
+                        <table id="tblItem" class="table table-success table-striped">
                             <thead>
                             <tr>
                                 <th scope="col">Item ID</th>
@@ -88,7 +89,7 @@
                                 <th scope="col">Item Price</th>
                             </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="tbodyItem">
 
                             </tbody>
                         </table>
@@ -160,6 +161,7 @@
             </div>
         </div>
     </section>
+    <!--order-->
     <section id="order">
         <div class="rounded-3 p-3" style="background-color: green; margin-top: 30px;">
             <h1 class="text-center mb-3"><i class="bi bi-bag-check-fill"></i>Order Form</h1>
