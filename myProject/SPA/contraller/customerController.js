@@ -19,7 +19,9 @@ $("#btnCustomerAdd").click(function () {
     customerDB.push(customerOB);
     clearFileld();
     addCustomerData();
+});
 
+function bindCustomerRow(){
     $("#tbodyCustomer>tr").click(function () {
         let customerId = $(this).children(":eq(0)").text();
         let customerName = $(this).children(":eq(1)").text();
@@ -31,7 +33,7 @@ $("#btnCustomerAdd").click(function () {
         $("#txtCusAddress").val(customerAddress);
         $("#txtCusTP").val(customerTelNumber);
     });
-});
+}
 
 /*lode table*/
 function addCustomerData() {
@@ -39,6 +41,7 @@ function addCustomerData() {
     for (var i of customerDB) {
         let raw = `<tr><td>${i.getCustomerID()}</td><td>${i.getCustomerName()}</td><td>${i.getCustomerAddress()}</td><td>${i.getCustomerTelNumber()}</td></tr>`
         $("#tblCustomer").append(raw);
+        bindCustomerRow();
     }
 }
 
@@ -104,10 +107,11 @@ $("#btnCustomerUpdate").click(function () {
     let customerTelNumber = $("#txtCusTP").val();
 
     for (var i = 0; i < customerDB.length; i++) {
-        customerDB[i].setCustomerID(customerId);
-        customerDB[i].setCustomerName(customerName);
-        customerDB[i].setCustomerAddress(customerAddress);
-        customerDB[i].setCustomerTelNumber(customerTelNumber);
+        if (customerDB[i].getCustomerID()==customerId){
+            customerDB[i].setCustomerName(customerName);
+            customerDB[i].setCustomerAddress(customerAddress);
+            customerDB[i].setCustomerTelNumber(customerTelNumber);
+        }
     }
     addCustomerData();
 });
