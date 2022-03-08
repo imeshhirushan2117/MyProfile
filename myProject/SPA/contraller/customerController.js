@@ -42,6 +42,7 @@ function addCustomerData() {
         let raw = `<tr><td>${i.getCustomerID()}</td><td>${i.getCustomerName()}</td><td>${i.getCustomerAddress()}</td><td>${i.getCustomerTelNumber()}</td></tr>`
         $("#tblCustomer").append(raw);
         bindCustomerRow();
+        cusDelete();
     }
 }
 
@@ -95,9 +96,18 @@ function serchCustomer(id) {
 }
 
 /*customer delete*/
-$("#btnCustomerDelete").click(function () {
-
-});
+function cusDelete(){
+    $("#btnCustomerDelete").click(function () {
+        let customerId = $("#txtCusID").val();
+        for (let i =0;i<customerDB.length;i++){
+            if (customerDB[i].getCustomerID()==customerId){
+                customerDB.splice(i,1);
+            }
+        }
+        addCustomerData();
+        clearFileld();
+    });
+}
 
 /*customer Update*/
 $("#btnCustomerUpdate").click(function () {

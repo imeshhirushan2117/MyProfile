@@ -19,7 +19,8 @@ $("#btnItemAdd").click(function () {
     itemDB.push(itemOB);
     clearFileldItem();
     addItemData();
-
+});
+function bindItemRow(){
     $("#tbodyItem>tr").click(function () {
         let itemId = $(this).children(":eq(0)").text();
         let itemName = $(this).children(":eq(1)").text();
@@ -31,13 +32,15 @@ $("#btnItemAdd").click(function () {
         $("#txtItemQty").val(itemQty);
         $("#txtItemPrice").val(itemPrice);
     });
-});
+}
 /*table load*/
 function addItemData() {
     $("#tbodyItem").empty();
     for (var i of itemDB) {
         let raw = `<tr><td>${i.getItemID()}</td><td>${i.getItemName()}</td><td>${i.getItemQty()}</td><td>${i.getItemPrice()}</td></tr>`
         $("#tblItem").append(raw);
+        bindItemRow();
+        itemDelete();
     }
 }
 
@@ -88,9 +91,19 @@ function searchItem(id) {
 }
 
 /*item Delete*/
-$("#btnItemDelete").click(function () {
+function itemDelete() {
+    $("#btnItemDelete").click(function () {
+        let itemId = $("#txtItemID").val();
+        for (let i =0;i<itemDB.length;i++){
+            if (itemDB[i].getItemID()==itemId){
+                itemDB.splice(i,1);
+            }
+        }
+        addItemData()
+        clearFileldItem();
+    });
+}
 
-});
 
 /*Item Update*/
 $("#btnItemUpdate").click(function () {
@@ -100,11 +113,11 @@ $("#btnItemUpdate").click(function () {
     let itemPrice = $("#txtItemPrice").val();
 
     for (var i = 0; i < itemDB.length; i++) {
-        itemDB[i].setItemID(itemId);
-        itemDB[i].setItemName(itemName);
-        itemDB[i].setItemQty(itemQty);
-        itemDB[i].setItemPrice(itemPrice);
-
+        if(itemDB[i].getItemID()==itemId){
+            itemDB[i].setItemName(itemName);
+            itemDB[i].setItemQty(itemQty);
+            itemDB[i].setItemPrice(itemPrice);
+        }
     }
     addItemData();
 });
