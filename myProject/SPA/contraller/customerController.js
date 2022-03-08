@@ -7,12 +7,15 @@ $("#btnCustomerAdd").click(function () {
     let customerAddress = $("#txtCusAddress").val();
     let customerTelNumber = $("#txtCusTP").val();
 
-    var customerOB = {
-        id: customerId,
-        name: customerName,
-        address: customerAddress,
-        telNumber: customerTelNumber
-    }
+    /* var customerOB = {
+         id: customerId,
+         name: customerName,
+         address: customerAddress,
+         telNumber: customerTelNumber
+     }*/
+
+    var customerOB = new CustomerDTO(customerId, customerName, customerAddress, customerTelNumber);
+
     customerDB.push(customerOB);
     clearFileld();
     addCustomerData();
@@ -30,10 +33,11 @@ $("#btnCustomerAdd").click(function () {
     });
 });
 
+/*lode table*/
 function addCustomerData() {
     $("#tbodyCustomer").empty();
     for (var i of customerDB) {
-        let raw = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.telNumber}</td></tr>`
+        let raw = `<tr><td>${i.getCustomerID()}</td><td>${i.getCustomerName()}</td><td>${i.getCustomerAddress()}</td><td>${i.getCustomerTelNumber()}</td></tr>`
         $("#tblCustomer").append(raw);
     }
 }
@@ -42,6 +46,7 @@ function addCustomerData() {
 $("#btnCustomerClear").click(function () {
     clearFileld();
 });
+
 function clearFileld() {
     $("#txtCusID,#txtCusName,#txtCusAddress,#txtCusTP").val("");
 }
@@ -68,10 +73,10 @@ $("#btnCustomerSearch").click(function () {
     var searchID = $("#txtCustomerSearch").val();
     var response = serchCustomer(searchID);
     if (response) {
-        $("#txtCusID").val(response.id);
-        $("#txtCusName").val(response.name);
-        $("#txtCusAddress").val(response.address);
-        $("#txtCusTP").val(response.telNumber);
+        $("#txtCusID").val(response.getCustomerID());
+        $("#txtCusName").val(response.getCustomerName());
+        $("#txtCusAddress").val(response.getCustomerAddress());
+        $("#txtCusTP").val(response.getCustomerTelNumber());
     } else {
         alert("Invalid Customer Search");
         clearFileld();
@@ -80,7 +85,7 @@ $("#btnCustomerSearch").click(function () {
 
 function serchCustomer(id) {
     for (let i = 0; i < customerDB.length; i++) {
-        if (customerDB[i].id == id) {
+        if (customerDB[i].getCustomerID() == id) {
             return customerDB[i];
         }
     }
@@ -89,4 +94,20 @@ function serchCustomer(id) {
 /*customer delete*/
 $("#btnCustomerDelete").click(function () {
 
+});
+
+/*customer Update*/
+$("#btnCustomerUpdate").click(function () {
+    let customerId = $("#txtCusID").val();
+    let customerName = $("#txtCusName").val();
+    let customerAddress = $("#txtCusAddress").val();
+    let customerTelNumber = $("#txtCusTP").val();
+
+    for (var i = 0; i < customerDB.length; i++) {
+        customerDB[i].setCustomerID(customerId);
+        customerDB[i].setCustomerName(customerName);
+        customerDB[i].setCustomerAddress(customerAddress);
+        customerDB[i].setCustomerTelNumber(customerTelNumber);
+    }
+    addCustomerData();
 });

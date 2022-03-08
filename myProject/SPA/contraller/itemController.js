@@ -7,12 +7,15 @@ $("#btnItemAdd").click(function () {
     let itemQty = $("#txtItemQty").val();
     let itemPrice = $("#txtItemPrice").val();
 
-    var itemOB = {
+    /*var itemOB = {
         id: itemId,
         name: itemName,
         qty: itemQty,
         price: itemPrice
-    }
+    }*/
+
+    var itemOB = new ItemDTO(itemId,itemName,itemQty,itemPrice);
+
     itemDB.push(itemOB);
     clearFileldItem();
     addItemData();
@@ -29,11 +32,11 @@ $("#btnItemAdd").click(function () {
         $("#txtItemPrice").val(itemPrice);
     });
 });
-/*tableload*/
+/*table load*/
 function addItemData() {
     $("#tbodyItem").empty();
     for (var i of itemDB) {
-        let raw = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.qty}</td><td>${i.price}</td></tr>`
+        let raw = `<tr><td>${i.getItemID()}</td><td>${i.getItemName()}</td><td>${i.getItemQty()}</td><td>${i.getItemPrice()}</td></tr>`
         $("#tblItem").append(raw);
     }
 }
@@ -67,10 +70,10 @@ $("#btnItemSearch").click(function () {
     var searchID = $("#txtItemSearch").val();
     var response = searchItem(searchID);
     if (response) {
-        $("#txtItemID").val(response.id);
-        $("#txtItemName").val(response.name);
-        $("#txtItemQty").val(response.qty);
-        $("#txtItemPrice").val(response.price);
+        $("#txtItemID").val(response.getItemID());
+        $("#txtItemName").val(response.getItemName());
+        $("#txtItemQty").val(response.getItemQty());
+        $("#txtItemPrice").val(response.getItemPrice());
     } else {
         alert("Invalid Item Search");
         clearFileld();
@@ -78,11 +81,30 @@ $("#btnItemSearch").click(function () {
 });
 function searchItem(id) {
     for (let i = 0; i < itemDB.length; i++) {
-        if (itemDB[i].id == id) {
+        if (itemDB[i].getItemID() == id) {
             return itemDB[i];
         }
     }
 }
+
+/*item Delete*/
 $("#btnItemDelete").click(function () {
 
+});
+
+/*Item Update*/
+$("#btnItemUpdate").click(function () {
+    let itemId = $("#txtItemID").val();
+    let itemName = $("#txtItemName").val();
+    let itemQty = $("#txtItemQty").val();
+    let itemPrice = $("#txtItemPrice").val();
+
+    for (var i = 0; i < itemDB.length; i++) {
+        itemDB[i].setItemID(itemId);
+        itemDB[i].setItemName(itemName);
+        itemDB[i].setItemQty(itemQty);
+        itemDB[i].setItemPrice(itemPrice);
+
+    }
+    addItemData();
 });

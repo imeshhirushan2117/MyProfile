@@ -11,7 +11,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="item.html">
+            <a class="navbar-brand" href="index.html">
                 <img src="assets/img/food.jpg" width="100" height="100" alt="Logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,8 +56,11 @@
                         class="bi bi-trash"></i></button>
                 <button class="btn btn-warning" id="btnItemClear" style="margin-bottom: -10px" type="button">Clear <i
                         class="bi bi-backspace m-2"></i></button>
-                <button class="btn btn-info" id="btnItemAdd" style="margin-bottom: -10px" type="button">Add <i
+                <button class="btn btn-success" id="btnItemAdd" style="margin-bottom: -10px" type="button">Add <i
                         class="bi bi-person-plus-fill m-2"></i></button>
+                <button class="btn btn-info" id="btnItemUpdate" style="margin-bottom: -10px" type="button">Update <i
+                        class="bi bi-arrow-repeat"></i></button>
+
             </div>
             <div class="row">
                 <div class="mb-3 col-6">
@@ -119,8 +122,11 @@
                         class="bi bi-trash"></i></button>
                 <button class="btn btn-warning" id="btnCustomerClear" style="margin-bottom: -10px" type="button">Clear <i
                         class="bi bi-backspace m-2"></i></button>
-                <button class="btn btn-info" id="btnCustomerAdd" style="margin-bottom: -10px" type="button">Add <i
+                <button class="btn btn-success" id="btnCustomerAdd" style="margin-bottom: -10px" type="button">Add <i
                         class="bi bi-person-plus-fill m-2"></i></button>
+                <button class="btn btn-info" id="btnCustomerUpdate" style="margin-bottom: -10px" type="button">Update <i
+                        class="bi bi-arrow-repeat"></i></button>
+
             </div>
             <div class="row">
                 <div class="mb-3 col-6">
@@ -356,6 +362,9 @@
 <script src="assets/jquery/jquery-3.6.0.min.js"></script>
 <script src="assets/js/javaScript.js"></script>
 <script src="contraller/customerController.js"></script>
+<script src="contraller/itemController.js"></script>
+<script src="model/CustomerDTO.js"></script>
+<script src="model/ItemDTO.js"></script>
 <script  src="db/DB.js"> </script>
 </body>
 </html>
