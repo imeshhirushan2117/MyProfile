@@ -1,5 +1,5 @@
 /*===============Item party===============*/
-
+generateId();
 /*addItem*/
 $("#btnItemAdd").click(function () {
     let itemId = $("#txtItemID").val();
@@ -19,6 +19,7 @@ $("#btnItemAdd").click(function () {
     itemDB.push(itemOB);
     clearFileldItem();
     addItemData();
+    generateId();
 });
 function bindItemRow(){
     $("#tbodyItem>tr").click(function () {
@@ -101,6 +102,7 @@ function itemDelete() {
         }
         addItemData()
         clearFileldItem();
+        generateId();
     });
 }
 
@@ -120,4 +122,27 @@ $("#btnItemUpdate").click(function () {
         }
     }
     addItemData();
+    generateId();
 });
+
+/*Item ID auto generate*/
+function generateId() {
+    let index = itemDB.length - 1;
+    let id;
+    let temp;
+    if (index != -1) {
+        id = itemDB[itemDB.length - 1].getItemID();
+        temp = id.split("-")[1];
+        temp++;
+    }
+
+    if (index == -1) {
+        $("#txtItemID").val("I00-001");
+    } else if (temp <= 9) {
+        $("#txtItemID").val("I00-00" + temp);
+    } else if (temp <= 99) {
+        $("#txtItemID").val("I00-0" + temp);
+    } else {
+        $("#txtItemID").val("I00-" + temp);
+    }
+}

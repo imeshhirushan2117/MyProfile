@@ -1,5 +1,5 @@
 /*===============Customer party===============*/
-
+generateId();
 /*customerAdd*/
 $("#btnCustomerAdd").click(function () {
     let customerId = $("#txtCusID").val();
@@ -19,6 +19,7 @@ $("#btnCustomerAdd").click(function () {
     customerDB.push(customerOB);
     clearFileld();
     addCustomerData();
+    generateId();
 });
 
 function bindCustomerRow(){
@@ -106,6 +107,7 @@ function cusDelete(){
         }
         addCustomerData();
         clearFileld();
+        generateId();
     });
 }
 
@@ -124,4 +126,27 @@ $("#btnCustomerUpdate").click(function () {
         }
     }
     addCustomerData();
+    generateId();
 });
+
+/*Customer ID auto generate*/
+function generateId() {
+    let index = customerDB.length - 1;
+    let id;
+    let temp;
+    if (index != -1) {
+        id = customerDB[customerDB.length - 1].getCustomerID();
+        temp = id.split("-")[1];
+        temp++;
+    }
+
+    if (index == -1) {
+        $("#txtCusID").val("C00-001");
+    } else if (temp <= 9) {
+        $("#txtCusID").val("C00-00" + temp);
+    } else if (temp <= 99) {
+        $("#txtCusID").val("C00-0" + temp);
+    } else {
+        $("#txtCusID").val("C00-" + temp);
+    }
+}
