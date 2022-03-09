@@ -20,7 +20,7 @@ function ItemDTO(id, name, qty, price) {
         return itemQty;
     }
     this.setItemQty = function (qty) {
-        itemQty = name;
+        itemQty = qty;
     }
     this.getItemPrice= function () {
         return itemPrice;

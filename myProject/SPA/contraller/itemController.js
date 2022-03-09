@@ -123,6 +123,7 @@ $("#btnItemUpdate").click(function () {
     }
     addItemData();
     generateId();
+    clearFileldItem();
 });
 
 /*Item ID auto generate*/
