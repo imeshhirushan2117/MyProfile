@@ -20,6 +20,7 @@ $("#btnCustomerAdd").click(function () {
     clearFileld();
     addCustomerData();
     generateId();
+    loadAllCustomerIds();
 });
 
 function bindCustomerRow(){

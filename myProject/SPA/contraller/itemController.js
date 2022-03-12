@@ -20,6 +20,7 @@ $("#btnItemAdd").click(function () {
     clearFileldItem();
     addItemData();
     generateId();
+    loadAllItemIds();
 });
 function bindItemRow(){
     $("#tbodyItem>tr").click(function () {
