@@ -7,12 +7,6 @@ $("#btnItemAdd").click(function () {
     let itemQty = $("#txtItemQty").val();
     let itemPrice = $("#txtItemPrice").val();
 
-    /*var itemOB = {
-        id: itemId,
-        name: itemName,
-        qty: itemQty,
-        price: itemPrice
-    }*/
 
     var itemOB = new ItemDTO(itemId,itemName,itemQty,itemPrice);
 

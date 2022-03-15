@@ -1,5 +1,5 @@
 /*===============Customer party===============*/
-generateId();
+generateCusId();
 /*customerAdd*/
 $("#btnCustomerAdd").click(function () {
     let customerId = $("#txtCusID").val();
@@ -7,19 +7,13 @@ $("#btnCustomerAdd").click(function () {
     let customerAddress = $("#txtCusAddress").val();
     let customerTelNumber = $("#txtCusTP").val();
 
-    /* var customerOB = {
-         id: customerId,
-         name: customerName,
-         address: customerAddress,
-         telNumber: customerTelNumber
-     }*/
 
     var customerOB = new CustomerDTO(customerId, customerName, customerAddress, customerTelNumber);
 
     customerDB.push(customerOB);
     clearFileld();
     addCustomerData();
-    generateId();
+    generateCusId();
     loadAllCustomerIds();
 });
 
@@ -54,7 +48,7 @@ $("#btnCustomerClear").click(function () {
 });
 
 function clearFileld() {
-    $("#txtCusID,#txtCusName,#txtCusAddress,#txtCusTP").val("");
+    $("#txtCusName,#txtCusAddress,#txtCusTP").val("");
 }
 
 /*textFeeldsForcasing*/
@@ -108,7 +102,7 @@ function cusDelete(){
         }
         addCustomerData();
         clearFileld();
-        generateId();
+        generateCusId();
     });
 }
 
@@ -127,11 +121,11 @@ $("#btnCustomerUpdate").click(function () {
         }
     }
     addCustomerData();
-    generateId();
+    generateCusId();
 });
 
 /*Customer ID auto generate*/
-function generateId() {
+function generateCusId() {
     let index = customerDB.length - 1;
     let id;
     let temp;
